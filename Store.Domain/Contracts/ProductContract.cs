@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Flunt.Validations;
+using Store.Domain.Entities;
 
 namespace Store.Domain.Contracts
 {
-    internal class ProductContract
+    public class ProductContract : Contract<Product>
     {
+        public ProductContract(Product product)
+        {
+            Requires()
+                .IsNotNull(product, "Product", "Produto inválido");
+        }
     }
 }

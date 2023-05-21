@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Flunt.Validations;
+using Store.Domain.Entities;
 
 namespace Store.Domain.Contracts
 {
-    internal class CreateCustomerContract
+    public class CustomerContract : Contract<Customer>
     {
+        public CustomerContract(Customer customer)
+        {
+            Requires()
+                .IsNotNull(customer, "Customer", "Cliente inválido");
+        }
     }
 }
