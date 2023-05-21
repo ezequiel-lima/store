@@ -10,5 +10,12 @@ namespace Store.Domain.Contracts
             Requires()
                 .IsNotNull(product, "Product", "Produto inválido");
         }
+
+        public ProductContract(Product product, int quantity)
+        {
+            Requires()
+                .IsNotNull(product, "Product", "Produto inválido")
+                .IsGreaterThan(quantity, 0, "A quantidade deve ser maior que zero");
+        }
     }
 }

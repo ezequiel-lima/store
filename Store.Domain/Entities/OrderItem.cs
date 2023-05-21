@@ -7,8 +7,7 @@ namespace Store.Domain.Entities
     {
         public OrderItem(Product product, int quantity)
         {
-            AddNotifications(new ProductContract(product)
-                .IsGreaterThan(quantity, 0, "A quantidade deve ser maior que zero"));
+            AddNotifications(new ProductContract(product, quantity));
 
             Product = product;
             Price = Product != null ? Product.Price : 0;

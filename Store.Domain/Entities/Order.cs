@@ -29,6 +29,8 @@ namespace Store.Domain.Entities
 
         public void AddItem(Product product, int quantity)
         {
+            AddNotifications(new ProductContract(product, quantity));
+
             var item = new OrderItem(product, quantity);
             if (item.IsValid)
                 Items.Add(item);
@@ -50,6 +52,7 @@ namespace Store.Domain.Entities
 
         public void Pay(decimal amount)
         {
+            amount -= Discount.Value();
             if (amount == Total())
                 Status = EOrderStatus.WaitingDelivery;
         }
