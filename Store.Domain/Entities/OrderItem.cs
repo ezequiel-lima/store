@@ -1,9 +1,15 @@
-﻿namespace Store.Domain.Entities
+﻿
+using Store.Domain.Contracts;
+
+namespace Store.Domain.Entities
 {
     public class OrderItem : Entity
     {
         public OrderItem(Product product, int quantity)
         {
+            AddNotifications(new ProductContract(product)
+                .IsGreaterThan(quantity, 0, "A quantidade deve ser maior que zero"));
+
             Product = product;
             Price = Product != null ? Product.Price : 0;
             Quantity = quantity;
