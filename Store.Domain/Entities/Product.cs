@@ -2,6 +2,8 @@
 {
     public class Product : Entity
     {
+        public Product() { }
+
         public Product(string title, decimal price, bool active)
         {
             Title = title;
@@ -12,5 +14,12 @@
         public string Title { get; private set; }
         public decimal Price { get; private set; }
         public bool Active { get; private set; }
+
+        public void Alterar(string title, decimal price, bool active)
+        {
+            Title = title;
+            Price = price;
+            Active = active;
+        }
     }
 }

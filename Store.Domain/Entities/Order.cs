@@ -7,9 +7,7 @@ namespace Store.Domain.Entities
     public class Order : Entity
     {
         public Order(Customer customer, decimal deliveryFee, Discount discount)
-        {
-            AddNotifications(new CustomerContract(customer));
-
+        {           
             Customer = customer;
             Date = DateTime.Now;
             Number = Guid.NewGuid().ToString().Substring(0, 8);
@@ -17,6 +15,8 @@ namespace Store.Domain.Entities
             DeliveryFee = deliveryFee;
             Discount = discount;
             Status = EOrderStatus.WaitingPayment;
+
+            AddNotifications(new CustomerContract(customer));
         }
 
         public Customer Customer { get; private set; }

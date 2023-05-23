@@ -6,10 +6,10 @@ namespace Store.Domain.Entities
     {
         public Customer(string name, string email)
         {
-            AddNotifications(new CreateCustomerContract(this));
-
             Name = name;
             Email = email;
+
+            AddNotifications(new CreateCustomerContract(this));   
         }
 
         public string Name { get; private set; }

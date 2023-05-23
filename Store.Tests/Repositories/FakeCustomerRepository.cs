@@ -8,7 +8,7 @@ namespace Store.Tests.Repositories
         public Customer Get(string document)
         {
             if (document == "12345678911")
-                return new Customer("Ezequiel", "ezequiel.lima.br@gmail.com");
+                return new Customer("EzequielLim", "ezequiel.lima.br@gmail.com");
 
             return null;
         }
