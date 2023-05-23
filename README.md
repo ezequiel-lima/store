@@ -12,11 +12,11 @@ Para facilitar a criação de testes, foram utilizados repositórios falsos (Fak
 
 Testes
 
-![Tests](https://github.com/ezequiel-lima/store/assets/81567476/f77525aa-3a82-4233-aacd-25720c617bcf)
+![Tests](https://github.com/ezequiel-lima/store/assets/81567476/4f063208-061d-48d6-bd9c-0e309d60ad68)
 
 FakeRepositories
 
-![FakeRepositories](https://github.com/ezequiel-lima/store/assets/81567476/e2c3052f-6731-4202-96bb-ea52b7fa1637)
+![FakeRepositories](https://github.com/ezequiel-lima/store/assets/81567476/7c7e24d4-4c89-4f10-a436-bec2769627bd)
 
 ## Como executar o projeto
 Para executar o projeto, siga as seguintes etapas:
